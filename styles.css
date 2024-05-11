@@ -1,20 +1,108 @@
-/* Basic styling for the table */
+/* Reset default margin and padding */
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222; /* Dark gray background */
+  color: #ddd; /* Light gray text */
+  overflow: hidden;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff; /* White heading */
+}
+
+/* Table styles */
 table {
-    border-collapse: collapse;
-    width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  z-index: 1;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444; /* Darker border lines */
+  text-align: center;
+  z-index: 1;
+}
+
+th {
+  background-color: #444; /* Even darker gray for headers */
+  font-weight: bold;
+  color: #fff; /* White text for headers */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #333; /* Darker gray background for even rows */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #2d2d2d; /* Slightly lighter dark gray for odd rows */
+}
+
+/* Highlight row on hover (optional) */
+tbody tr:hover {
+  background-color: #4d4d4d; /* Slightly lighter dark gray highlight on hover */
+}
+
+/* Define colors for gold, silver, and bronze rows */
+.gold-row {
+  color: gold;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px gold, 0 0 14px gold, 0 0 16px gold, 0 0 20px gold, 0 0 30px gold;
+  font-weight: bold ;
+}
+
+.silver-row {
+  color: silver;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px silver, 0 0 14px silver, 0 0 16px silver, 0 0 20px silver, 0 0 30px silver;
+}
+
+.bronze-row {
+  color: #cd7f32; /* Color for bronze row (shade of brown) */
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #cd7f32, 0 0 14px #cd7f32, 0 0 16px #cd7f32, 0 0 20px #cd7f32, 0 0 30px #cd7f32;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  animation: animate 10s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Inner glow effect */
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(0, 0);
   }
-  
-  /* Styling for table header */
-  th {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+  100% {
+    transform: translate(100vw, 100vh);
   }
-  
-  /* Styling for table data */
-  td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
+}
+
+/* Optional: Add an outer glow effect */
+.circle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Outer glow effect */
+}
