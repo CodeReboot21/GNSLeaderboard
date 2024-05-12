@@ -7,17 +7,20 @@
 
 /* Body styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #222; /* Dark gray background */
   color: #ddd; /* Light gray text */
   overflow: hidden;
+  overflow-y: scroll;
+  text-shadow: 0 0 3px #fff;
 }
 
 /* Heading styles */
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   color: #fff; /* White heading */
+  text-shadow: 1px 1px 10px#FFF;
 }
 
 /* Table styles */
@@ -57,18 +60,17 @@ tbody tr:hover {
 /* Define colors for gold, silver, and bronze rows */
 .gold-row {
   color: gold;
-  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px gold, 0 0 14px gold, 0 0 16px gold, 0 0 20px gold, 0 0 30px gold;
-  font-weight: bold ;
+  text-shadow: 0 1px 4px #FFF, 0 0px 10px gold, 0 0px 20px gold, 0 0px 40px gold;
 }
 
 .silver-row {
   color: silver;
-  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px silver, 0 0 14px silver, 0 0 16px silver, 0 0 20px silver, 0 0 30px silver;
+  text-shadow: 0 1px 4px #FFF, 0 0px 10px silver, 0 0px 20px #c0c0c0c3, 0 0px 40px #c0c0c0;
 }
 
 .bronze-row {
-  color: #cd7f32; /* Color for bronze row (shade of brown) */
-  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #cd7f32, 0 0 14px #cd7f32, 0 0 16px #cd7f32, 0 0 20px #cd7f32, 0 0 30px #cd7f32;
+  color: #cd8032; /* Color for bronze row (shade of brown) */
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #cd80325e, 0 0 14px #cd80325e, 0 0 16px #cd80325e, 0 0 20px #cd80325e, 0 0 30px #cd80325e;
 }
 
 .container {
