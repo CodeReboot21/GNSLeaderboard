@@ -12,15 +12,30 @@ body {
   color: #ddd; /* Light gray text */
   overflow: hidden;
   overflow-y: scroll;
-  text-shadow: 0 0 3px #fff;
+  text-shadow: 0 0 3px #c8c8c8;
 }
 
-/* Heading styles */
-h1 {
+.leaderboard-heading {
   text-align: center;
   margin-bottom: 50px;
-  color: #fff; /* White heading */
-  text-shadow: 1px 1px 10px#FFF;
+  font-size: 28px; /* Adjust font size for main title */
+  color: #ffffff; /* Dark text color */
+  font-weight: bold; /* Bold text */
+  line-height: 1.2; /* Adjust line spacing for readability */
+}
+
+.leaderboard-heading br {
+  /* Style the line break (optional) */
+  margin: 0 10px; /* Add spacing before and after the break */
+  /* Consider using a CSS pseudo-element like ::after for styling flexibility instead of `<br>`. */
+}
+
+.leaderboard-heading span {
+  /* Styles for subheading (optional) */
+  display: block; /* Force subheading to a new line */
+  font-size: 18px; /* Adjust font size for subheading */
+  color: #999; /* Lighter text color for subheading */
+  font-weight: normal; /* Regular font weight for subheading */
 }
 
 /* Table styles */
@@ -70,8 +85,7 @@ tbody tr:hover {
 
 .bronze-row {
   color: #cd8032; /* Color for bronze row (shade of brown) */
-  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #cd80325e, 0 0 14px #cd80325e, 0 0 16px #cd80325e, 0 0 20px #cd80325e, 0 0 30px #cd80325e;
-}
+text-shadow: 0 1px 4px #FFF, 0 0px 10px #cd8032b9, 0 0px 20px #cd80327f, 0 0px 40px #cd8032bf;}
 
 .container {
   position: absolute;
@@ -107,4 +121,103 @@ tbody tr:hover {
   height: 100%;
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Outer glow effect */
+}
+
+/* General styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* Dark background */
+  color: #ddd; /* Light text color */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Buttons on opposite sides */
+  align-items: center; /* Vertical centering */
+  padding: 10px 20px;
+  background-color: #111; /* Darker navbar background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-right: 20px; /* Spacing between buttons */
+}
+
+/* Button styles */
+button {
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove default border */
+  color: inherit; /* Inherit text color from body */
+  padding: 5px 15px;
+  cursor: pointer; /* Indicate clickable cursor */
+  font-size: 16px; /* Adjust font size */
+  text-transform: uppercase; /* Convert text to uppercase for a modern look */
+  transition: all 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+button:hover {
+  color: #fff; /* White text on hover */
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.2); /* Subtle white glow on hover */
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent element */
+}
+
+.about-program {
+  display: flex; /* Arrange image and content side-by-side */
+  margin: 50px auto; /* Center the section horizontally with some margin */
+  max-width: 800px; /* Limit the overall width */
+}
+
+.content-container {
+  flex: 1; /* Content container takes up remaining space */
+}
+
+.content-container h2 {
+  margin-bottom: 10px; /* Add spacing below heading */
+  font-size: 24px; /* Adjust heading size */
+}
+
+.content-container p {
+  font-size: 16px; /* Adjust paragraph text size */
+  line-height: 1.5; /* Increase line spacing for readability */
+}
+
+.features {
+  margin-top: 15px; /* Add spacing above features list */
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.features li {
+  margin-bottom: 5px; /* Add spacing between features */
+}
+
+.download-btn {
+  display: inline-block; /* Allow text wrapping next to button */
+  padding: 10px 20px; /* Add padding for button content */
+  background-color: #4f4caf; /* Green button color */
+  color: white; /* White button text */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Add button corner rounding */
+  font-size: 16px; /* Adjust button text size */
+  text-decoration: none; /* Remove underline from link */
+  cursor: pointer; /* Indicate clickable cursor */
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.download-btn:hover {
+  background-color: #343274; /* Darken button color on hover */
 }
