@@ -14,7 +14,7 @@ body {
   text-shadow: 0 0 3px #c8c8c8;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at center,#15081d 0%, #000000 100%);
+  background-color: #080808;
 }
 
 .leaderboard-heading {
@@ -42,10 +42,13 @@ body {
 
 /* Table styles */
 table {
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
-  border-collapse: collapse;
   z-index: 1;
+  border-collapse: collapse;
+  border: #ffffff 1px;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 th, td {
@@ -57,41 +60,41 @@ th, td {
 }
 
 th {
-  background: #0c050c; /* Even darker gray for headers */
+  background: #040404; /* Even darker gray for headers */
   font-weight: bold;
   color: #fff; /* White text for headers */
 }
 
 tbody tr:nth-child(even) {
-  background-color: #202020; /* Darker gray background for even rows */
+  background-color: #111111; /* Darker gray background for even rows */
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #222222; /* Slightly lighter dark gray for odd rows */
+  background-color: #171717; /* Slightly lighter dark gray for odd rows */
 }
 
 /* Highlight row on hover (optional) */
 tbody tr:hover {
-  background-color: #3d3d3d; /* Slightly lighter dark gray highlight on hover */
+  background-color: #1f1f1f; /* Slightly lighter dark gray highlight on hover */
 }
 
 /* Define colors for gold, silver, and bronze rows */
 .gold-row {
   color: gold;
-  background: linear-gradient(to left, #222222 0%, rgba(138, 118, 0, 0.171) 100%);
-  text-shadow: 0 1px 4px #FFF, 0 0px 10px gold, 0 0px 20px gold, 0 0px 40px gold;
+  background: radial-gradient(rgba(255, 217, 0, 0.1), #171717);
+  text-shadow: 0 1px 4px #FFF, 0 0px 10px gold, 0 0px 20px rgba(255, 217, 0, 0.535), 0 0px 40px gold;
 }
 
 .silver-row {
   color: silver;
-  background: linear-gradient(to left, #202020 0%, rgba(81, 81, 81, 0.267) 100%);
-  text-shadow: 0 1px 4px #FFF, 0 0px 10px silver, 0 0px 20px #c0c0c0c3, 0 0px 40px #c0c0c0;
+  background: radial-gradient(rgba(192, 192, 192, 0.1), #111111);
+  text-shadow: 0 1px 4px #FFF, 0 0px 10px silver, 0 0px 20px #c0c0c07d, 0 0px 40px silver;
 }
 
 .bronze-row {
   color: #cd8032; /* Color for bronze row (shade of brown) */
-  background: linear-gradient(to left, #222222 0%, #4f311335 100%);
-  text-shadow: 0 1px 4px #FFF, 0 0px 10px #cd8032b9, 0 0px 20px #cd80327f, 0 0px 40px #cd8032bf;
+  background: radial-gradient(rgb(205, 128, 50, 0.1), #171717);
+  text-shadow: 0 1px 4px #FFF, 0 0px 10px #cd8032b9, 0 0px 20px #cd80327b, 0 0px 40px #cd8032bf;
 }
 
 .container {
@@ -137,7 +140,7 @@ tbody tr:hover {
   justify-content: space-between; /* Buttons on opposite sides */
   align-items: center; /* Vertical centering */
   padding: 10px 20px;
-  background: linear-gradient(to top,#000000 0%, #0f0616 100%);
+  background-color: #000000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
@@ -219,6 +222,7 @@ a {
 .download-btn {
   display: inline-block; /* Allow text wrapping next to button */
   padding: 10px 20px; /* Add padding for button content */
+  margin: 2px 2px;
   background-color: #7e1a9a; /* Green button color */
   color: white; /* White button text */
   border: none; /* Remove default button border */
@@ -232,3 +236,4 @@ a {
 .download-btn:hover {
   background-color: #561368; /* Darken button color on hover */
 }
+
