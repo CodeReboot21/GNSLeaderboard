@@ -8,11 +8,13 @@
 /* Body styles */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #222; /* Dark gray background */
   color: #ddd; /* Light gray text */
   overflow: hidden;
   overflow-y: scroll;
   text-shadow: 0 0 3px #c8c8c8;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center,#15081d 0%, #000000 100%);
 }
 
 .leaderboard-heading {
@@ -40,7 +42,8 @@ body {
 
 /* Table styles */
 table {
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   border-collapse: collapse;
   z-index: 1;
 }
@@ -54,38 +57,42 @@ th, td {
 }
 
 th {
-  background-color: #444; /* Even darker gray for headers */
+  background: #0c050c; /* Even darker gray for headers */
   font-weight: bold;
   color: #fff; /* White text for headers */
 }
 
 tbody tr:nth-child(even) {
-  background-color: #333; /* Darker gray background for even rows */
+  background-color: #202020; /* Darker gray background for even rows */
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #2d2d2d; /* Slightly lighter dark gray for odd rows */
+  background-color: #222222; /* Slightly lighter dark gray for odd rows */
 }
 
 /* Highlight row on hover (optional) */
 tbody tr:hover {
-  background-color: #4d4d4d; /* Slightly lighter dark gray highlight on hover */
+  background-color: #3d3d3d; /* Slightly lighter dark gray highlight on hover */
 }
 
 /* Define colors for gold, silver, and bronze rows */
 .gold-row {
   color: gold;
+  background: linear-gradient(to left, #222222 0%, rgba(138, 118, 0, 0.171) 100%);
   text-shadow: 0 1px 4px #FFF, 0 0px 10px gold, 0 0px 20px gold, 0 0px 40px gold;
 }
 
 .silver-row {
   color: silver;
+  background: linear-gradient(to left, #202020 0%, rgba(81, 81, 81, 0.267) 100%);
   text-shadow: 0 1px 4px #FFF, 0 0px 10px silver, 0 0px 20px #c0c0c0c3, 0 0px 40px #c0c0c0;
 }
 
 .bronze-row {
   color: #cd8032; /* Color for bronze row (shade of brown) */
-text-shadow: 0 1px 4px #FFF, 0 0px 10px #cd8032b9, 0 0px 20px #cd80327f, 0 0px 40px #cd8032bf;}
+  background: linear-gradient(to left, #222222 0%, #4f311335 100%);
+  text-shadow: 0 1px 4px #FFF, 0 0px 10px #cd8032b9, 0 0px 20px #cd80327f, 0 0px 40px #cd8032bf;
+}
 
 .container {
   position: absolute;
@@ -100,6 +107,7 @@ text-shadow: 0 1px 4px #FFF, 0 0px 10px #cd8032b9, 0 0px 20px #cd80327f, 0 0px 4
   background-color: rgb(44, 44, 44);
   animation: animate 10s linear infinite;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Inner glow effect */
+  z-index: -1;
 }
 
 @keyframes animate {
@@ -123,22 +131,13 @@ text-shadow: 0 1px 4px #FFF, 0 0px 10px #cd8032b9, 0 0px 20px #cd80327f, 0 0px 4
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Outer glow effect */
 }
 
-/* General styles */
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #222; /* Dark background */
-  color: #ddd; /* Light text color */
-}
-
 /* Navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between; /* Buttons on opposite sides */
   align-items: center; /* Vertical centering */
   padding: 10px 20px;
-  background-color: #111; /* Darker navbar background */
+  background: linear-gradient(to top,#000000 0%, #0f0616 100%);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
@@ -179,10 +178,22 @@ a {
   display: flex; /* Arrange image and content side-by-side */
   margin: 50px auto; /* Center the section horizontally with some margin */
   max-width: 800px; /* Limit the overall width */
+  flex: 1;
+  z-index: 2;
+  background-color: #1a1a1a;  /* Light blue background */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-program {
+    margin: 20px; /* Add margin around the entire section */
+  }
 }
 
 .content-container {
   flex: 1; /* Content container takes up remaining space */
+  z-index: 2;
 }
 
 .content-container h2 {
@@ -208,7 +219,7 @@ a {
 .download-btn {
   display: inline-block; /* Allow text wrapping next to button */
   padding: 10px 20px; /* Add padding for button content */
-  background-color: #4f4caf; /* Green button color */
+  background-color: #7e1a9a; /* Green button color */
   color: white; /* White button text */
   border: none; /* Remove default button border */
   border-radius: 5px; /* Add button corner rounding */
@@ -219,5 +230,5 @@ a {
 }
 
 .download-btn:hover {
-  background-color: #343274; /* Darken button color on hover */
+  background-color: #561368; /* Darken button color on hover */
 }
